@@ -13,7 +13,7 @@ A robust RESTful API for task management with role-based access control, built w
 
 ```bash
 # 1. Clone the repository
-git clone <repository-url>
+git clone https://github.com/Marim99/task-management-system.git
 cd task-management-system
 
 # 2. Copy environment file
@@ -22,10 +22,8 @@ cp env.example .env
 # 3. Build and start containers
 docker-compose up -d --build
 
-# 4. Wait for database to be ready (30 seconds)
-sleep 30
 docker exec -it task_management_system bash
-
+# 4. Install vendor
 composer install
 # 5. Generate application key
 php artisan key:generate
